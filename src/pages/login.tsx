@@ -14,10 +14,9 @@ export default function Login() {
       {session ? (
         <div>
             <Image className="rounded-full"
-            src={session.user?.image}
+            src={`${session.user?.image}`}
             width='200'
-            height='200'
-            />
+            height='200' alt={`${session.user?.name} Profile Pict`}            />
           <p>
             hi <span className="text-blue-500">{session.user?.name}</span>
           </p>

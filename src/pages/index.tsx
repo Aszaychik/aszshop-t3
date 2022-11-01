@@ -1,6 +1,5 @@
 
 import Jumbotron from "./jumbotron";
-import modal from "./modal";
 import navbar from "./navbar";
 
 const Home = () => {

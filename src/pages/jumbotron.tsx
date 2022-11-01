@@ -1,7 +1,7 @@
 export default function Jumbotron() {
   return (
-    <div>
-      TEST
+    <div className="flex justify-center">
+      JUMBOTRON
     </div>
   );
 }

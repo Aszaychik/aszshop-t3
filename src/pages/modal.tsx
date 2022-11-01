@@ -16,7 +16,7 @@ export default function App() {
     <div>
       {session ? (
       <>
-      <Button auto disabled onClick={handler} className="relative">
+      <Button auto css={{ backgroundColor: "$none" }} onClick={handler} className="relative">
         <Image className="rounded-full"
           src={`${session.user?.image}`}
           fill
@@ -42,11 +42,11 @@ export default function App() {
               width='200'
               height='200' alt={`${session.user?.name} Profile Pict`}/>
           </Modal.Body>
-          <Modal.Footer>
-            <Button auto flat color="error" onClick={closeHandler}>
+          <Modal.Footer justify="center">
+            <Button auto flat onClick={closeHandler}>
             Close
             </Button>
-            <Button onClick={() => signOut()}>
+            <Button auto color="error" onClick={() => signOut()}>
             Logout
             </Button>
           </Modal.Footer>

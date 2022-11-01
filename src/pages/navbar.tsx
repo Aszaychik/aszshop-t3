@@ -1,15 +1,16 @@
 import Link from "next/link";
+import modal from "./modal";
 
 export default function Navbar() {
   return (
     <main>
-      <nav className="bg-black text-white p-3 flex justify-between">
-        <div className="text-2xl">ASZSHOP</div>
+      <nav className="p-5 flex justify-between">
+        <div className="text-2xl cursor-pointer">ASZSHOP</div>
         <div>
-          <ul className="flex gap-3 items-center">
+          <ul className="flex gap-5 items-center cursor-pointer">
             <li>Home</li>
             <li>Categories</li>
-            <li><Link href='/login' className="bg-red-500 p-2 rounded hover:bg-red-700">Login</Link></li>
+            <li>{modal()}</li>
           </ul>
         </div>
       </nav>

@@ -10,7 +10,7 @@ export default function App() {
   ];
   return (
     <SSRProvider>
-      <Navbar variant="sticky" maxWidth='fluid'>
+      <Navbar disableBlur containerCss={{bgColor:'$white', padding: "$5"}} variant="sticky" maxWidth='fluid'>
         <Navbar.Toggle showIn='xs'/>
         <Navbar.Brand css={{ml:'$8', mr: '$2', gap:"$10" }}>
           <TbBrandVercel/>
@@ -55,10 +55,10 @@ export default function App() {
             />
           </Navbar.Item>
         </Navbar.Content>
-        <Navbar.Content variant="underline-rounded" enableCursorHighlight gap="$10" >
-          <Navbar.Link hideIn="xs" isActive href="#">Home</Navbar.Link>
-          <Navbar.Link hideIn="xs" href="#">Category</Navbar.Link>
-          <Navbar.Link hideIn="xs" href="#">Contact</Navbar.Link>
+        <Navbar.Content variant="underline-rounded" enableCursorHighlight underlineHeight='bold' activeColor='neutral' gap="$10" >
+          <Navbar.Link color='text' hideIn="xs" isActive href="#">Home</Navbar.Link>
+          <Navbar.Link color='text' hideIn="xs" href="#">Category</Navbar.Link>
+          <Navbar.Link color='text' hideIn="xs" href="#">Contact</Navbar.Link>
           <Navbar.Item>{modal()}</Navbar.Item>
         </Navbar.Content>
         <Navbar.Collapse disableAnimation>

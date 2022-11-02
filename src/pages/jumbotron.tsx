@@ -1,7 +1,7 @@
 export default function Jumbotron() {
   return (
-    <div className="flex justify-center">
-      JUMBOTRON
-    </div>
+    <main className="w-full h-10">
+
+    </main>
   );
 }

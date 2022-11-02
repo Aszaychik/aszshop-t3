@@ -58,7 +58,7 @@ export default function App() {
       </>
       ):(
       <>
-      <Button auto onClick={handler} className="hover:bg-blue-700">
+      <Button auto onClick={handler} css={{bgColor : '$black'}}>
         Login
       </Button>
       <Modal

@@ -1,12 +1,18 @@
-import { Input, Navbar, Text } from "@nextui-org/react";
+import { Dropdown, Input, Link, Navbar, Text } from "@nextui-org/react";
 import modal from "./modal";
 import { TbBrandVercel, TbSearch } from 'react-icons/tb'
 import {SSRProvider} from '@react-aria/ssr'; 
 export default function App() {
+  const collapseItems = [
+    "Home",
+    "Category",
+    "Contact",
+  ];
   return (
     <SSRProvider>
       <Navbar variant="sticky">
-        <Navbar.Brand css={{ mr: "$4", gap:"$10" }}>
+        <Navbar.Toggle showIn='xs'/>
+        <Navbar.Brand css={{ml:'$8', mr: '$2', gap:"$10" }}>
           <TbBrandVercel/>
           <Text b color='inherit' hideIn='xs'>
             ASZSHOP
@@ -39,6 +45,10 @@ export default function App() {
                 css={{
                   w:"75%",
                   jc: "center",
+                  "@xsMax": {
+                    w: "90%",
+                    jc: "center",
+                  },
                 }}
               
             />
@@ -50,6 +60,23 @@ export default function App() {
           <Navbar.Link hideIn="xs" href="#">Contact</Navbar.Link>
           <Navbar.Item>{modal()}</Navbar.Item>
         </Navbar.Content>
+        <Navbar.Collapse disableAnimation>
+          {collapseItems.map((item, index) => (
+            <Navbar.CollapseItem
+              key={item}
+            >
+              <Link
+                color="inherit"
+                css={{
+                  minWidth: "100%",
+                }}
+                href="#"
+              >
+                {item}
+              </Link>
+            </Navbar.CollapseItem>
+          ))}
+        </Navbar.Collapse>
       </Navbar>
     </SSRProvider>
   );

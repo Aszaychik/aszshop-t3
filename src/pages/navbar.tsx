@@ -1,18 +1,27 @@
+import { Input, Navbar, Text } from "@nextui-org/react";
 import modal from "./modal";
-
-export default function Navbar() {
+import { TbBrandVercel, TbSearch } from 'react-icons/tb'
+import {SSRProvider} from '@react-aria/ssr'; 
+export default function App() {
   return (
-    <main>
-      <nav className="p-5 flex justify-between">
-        <div className="text-2xl cursor-pointer text-blue-500 font-bold">ASZSHOP</div>
-        <div>
-          <ul className="flex gap-5 items-center">
-            <li className="cursor-pointer">Home</li>
-            <li className="cursor-pointer">Categories</li>
-            <li>{modal()}</li>
-          </ul>
-        </div>
-      </nav>
-    </main>
+    <SSRProvider>
+      <Navbar variant="sticky">
+        <Navbar.Brand css={{ mr: "$4", gap:"$10" }}>
+          <TbBrandVercel/>
+          <Text b color='inherit' css={{ mr: "$11" }} hideIn='xs'>
+            ASZSHOP
+          </Text>
+        </Navbar.Brand>
+        <Navbar.Content hideIn="xs" variant="highlight" enableCursorHighlight gap="$10" >
+          <Navbar.Link isActive href="#">Home</Navbar.Link>
+          <Navbar.Link href="#">Category</Navbar.Link>
+          <Navbar.Link href="#">Settings</Navbar.Link>
+          <Navbar.Link href="#">Contact</Navbar.Link>
+        </Navbar.Content>
+        <Navbar.Content>
+          <Navbar.Item>{modal()}</Navbar.Item>
+        </Navbar.Content>
+      </Navbar>
+    </SSRProvider>
   );
 }

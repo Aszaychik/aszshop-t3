@@ -10,7 +10,7 @@ export default function App() {
   ];
   return (
     <SSRProvider>
-      <Navbar variant="sticky">
+      <Navbar variant="sticky" maxWidth='fluid'>
         <Navbar.Toggle showIn='xs'/>
         <Navbar.Brand css={{ml:'$8', mr: '$2', gap:"$10" }}>
           <TbBrandVercel/>
@@ -39,9 +39,10 @@ export default function App() {
             }}
           >
             <Input
+              placeholder="Search..."
               clearable
               contentLeft={
-                <TbSearch fill="var(--nextui-colors-accents6)" size={16}/>}
+                <TbSearch size={16}/>}
                 css={{
                   w:"75%",
                   jc: "center",

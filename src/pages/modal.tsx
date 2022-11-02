@@ -1,4 +1,5 @@
 import React from "react";
+import { Loading } from "@nextui-org/react";
 import Image from 'next/image'
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Modal, Input, Row, Checkbox, Button, Text } from "@nextui-org/react";
@@ -12,6 +13,9 @@ export default function App() {
     console.log("closed");
   };
   const { data: session, status } = useSession();
+  if (status === "loading") {
+    return  <Loading type="points-opacity" />
+  }
   return (
     <div>
       {session ? (

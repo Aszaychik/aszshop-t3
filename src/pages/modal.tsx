@@ -58,7 +58,14 @@ export default function App() {
       </>
       ):(
       <>
-      <Button auto bordered onClick={handler} css={{color:"$black", borderColor:"$black", borderRadius:"unset"}}>
+      <Button auto bordered onClick={handler}
+      css={{color:"$black",
+      borderColor:"$black",
+      borderRadius:"unset",
+      '&:hover': {
+        background: '$black',
+        color: '$white',
+      },}}>
         Login
       </Button>
       <Modal

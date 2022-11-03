@@ -62,7 +62,8 @@ export default function App() {
             />
           </Navbar.Item>
         </Navbar.Content>
-        <Navbar.Content variant="underline" underlineHeight='bold' activeColor='neutral' gap="$10" >
+        <Navbar.Content variant="underline" underlineHeight='bold' activeColor="neutral" gap="$10"
+        >
           <Navbar.Link color='text' hideIn="xs" isActive href="#">Home</Navbar.Link>
           <Dropdown >
             <Navbar.Item hideIn="xs">

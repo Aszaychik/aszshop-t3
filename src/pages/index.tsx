@@ -1,6 +1,5 @@
-
-import Jumbotron from "./jumbotron";
-import navbar from "./navbar";
+import Jumbotron from "../components/jumbotron";
+import navbar from "../components/navbar";
 
 const Home = () => {
   return (

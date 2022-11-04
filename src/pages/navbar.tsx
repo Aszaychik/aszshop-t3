@@ -19,7 +19,7 @@ export default function App() {
     <SSRProvider>
       <Navbar disableBlur containerCss={{bgColor:'$white'}} variant="sticky" maxWidth='fluid'>
         <Navbar.Toggle showIn='xs'/>
-        <Navbar.Brand css={{ml:'$8', mr: '$2', gap:"$10" }}>
+        <Navbar.Brand css={{ gap:"$10" }}>
           <TbBrandVercel/>
           <Text b color='inherit' hideIn='xs'>
             ASZSHOP

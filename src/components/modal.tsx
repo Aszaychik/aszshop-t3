@@ -100,7 +100,7 @@ export default function App() {
             placeholder="Password"
             contentLeft={<MdOutlineLock fill="currentColor" />}
           />
-          <Button onClick={() => signIn("google")} icon={<AiOutlineGoogle />} className="hover:bg-blue-700">Login with Google</Button>
+          <Button onClick={() => signIn("google")} icon={<AiOutlineGoogle />} css={{bgColor:"$black"}}>Login with Google</Button>
           <Row justify="space-between">
             <Checkbox>
               <Text size={14}>Remember me</Text>
@@ -109,10 +109,10 @@ export default function App() {
           </Row>
         </Modal.Body>
         <Modal.Footer>
-          <Button auto flat color="error" onClick={closeHandler}>
+          <Button auto flat onClick={closeHandler} css={{bgColor:"$gray200", color:"$black"}}>
             Close
           </Button>
-          <Button auto onClick={closeHandler} className="hover:bg-blue-700">
+          <Button auto onClick={closeHandler} css={{bgColor:"$black"}}>
             Sign in
           </Button>
         </Modal.Footer>

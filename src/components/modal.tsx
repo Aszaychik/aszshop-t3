@@ -1,5 +1,5 @@
 import React from "react";
-import { Loading } from "@nextui-org/react";
+import { Loading, normalColors } from "@nextui-org/react";
 import Image from 'next/image'
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Modal, Input, Row, Checkbox, Button, Text } from "@nextui-org/react";

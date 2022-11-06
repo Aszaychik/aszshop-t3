@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nextui-c-cKnKee-gbVjbo-color-default {
+    --nextui--checkboxColor: #000000 !important;
+    --nextui--checkboxColorHover: #000000 !important;
+}

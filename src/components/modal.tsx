@@ -14,7 +14,7 @@ export default function App() {
   };
   const { data: session, status } = useSession();
   if (status === "loading") {
-    return  <Loading type="points-opacity" />
+    return  <Loading type="points-opacity" color="currentColor" />
   }
   return (
     <div>
@@ -47,10 +47,10 @@ export default function App() {
               height='200' alt={`${session.user?.name} Profile Pict`}/>
           </Modal.Body>
           <Modal.Footer justify="center">
-            <Button auto flat onClick={closeHandler}>
+            <Button auto flat css={{bgColor:"$gray200", color:"$black"}}  onClick={closeHandler}>
             Close
             </Button>
-            <Button auto color="error" onClick={() => signOut()}>
+            <Button auto css={{bgColor:"$black", color:"$white"}} onClick={() => signOut()}>
             Logout
             </Button>
           </Modal.Footer>
@@ -70,8 +70,6 @@ export default function App() {
       </Button>
       <Modal
         closeButton
-        blur
-        aria-labelledby="modal-title"
         open={visible}
         onClose={closeHandler}
       >

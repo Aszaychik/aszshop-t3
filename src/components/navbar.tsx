@@ -19,11 +19,13 @@ export default function App() {
     <SSRProvider>
       <Navbar disableBlur containerCss={{bgColor:'$white'}} variant="sticky" maxWidth='fluid'>
         <Navbar.Toggle showIn='xs'/>
-        <Navbar.Brand css={{ ml: '$6', gap:"$10" }}>
-          <TbBrandVercel/>
-          <Text b color='inherit' hideIn='xs'>
-            ASZSHOP
-          </Text>
+        <Navbar.Brand css={{ ml: '$6'}}>
+          <Link href="#" color='text'>
+            <TbBrandVercel/>
+            <Text b color='inherit' hideIn='xs' css={{ml: "$4"}}>
+              ASZSHOP
+            </Text>
+          </Link>
         </Navbar.Brand>
         <Navbar.Content
           css={{
@@ -64,7 +66,6 @@ export default function App() {
         </Navbar.Content>
         <Navbar.Content variant="underline" underlineHeight='bold' activeColor="neutral" gap="$10"
         >
-          <Navbar.Link color='text' hideIn="xs" isActive href="#">Home</Navbar.Link>
           <Dropdown >
             <Navbar.Item hideIn="xs">
               <Dropdown.Button

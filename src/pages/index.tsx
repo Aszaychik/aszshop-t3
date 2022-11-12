@@ -8,7 +8,7 @@ const Home = () => {
       <header>{navbar()}</header>
       <main>
         {Jumbotron()}
-        <article>{card()}</article>
+        {card()}
       </main>
     </>
   );

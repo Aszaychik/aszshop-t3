@@ -2,9 +2,11 @@ import { Button, Card, Grid, Row, Text } from "@nextui-org/react";
 import { trpc } from "../utils/trpc";
 
 export default function Cards() {
-  const { data } = trpc.productsRouter.getProdutcs.useQuery("testProd");
+  const { data } = trpc.productsRouter.getProdutcs.useQuery(
+    "cladr6wj50000qcwsttq7oh9c"
+  );
   return (
-    <Grid.Container gap={2}>
+    <Grid.Container>
       <Grid sm={12} md={5}>
         <Card>
           <Card.Header>

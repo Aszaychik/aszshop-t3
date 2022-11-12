@@ -1,7 +1,7 @@
 import { Button, Card, Grid, Row, Text } from "@nextui-org/react";
 import { trpc } from "../utils/trpc";
 
-export default function () {
+export default function Cards() {
   const { data } = trpc.productsRouter.getProdutcs.useQuery("testProd");
   return (
     <Grid.Container gap={2}>

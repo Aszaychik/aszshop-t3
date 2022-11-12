@@ -24,8 +24,12 @@ export default function Cards() {
           <Card.Divider />
           <Card.Footer>
             <Row justify="space-evenly">
-              <Button size="sm">Cancel</Button>
-              <Button size="sm">Rp.{data?.price}</Button>
+              <Button css={{ backgroundColor: "Black" }} size="sm">
+                Cancel
+              </Button>
+              <Button css={{ backgroundColor: "Black" }} size="sm">
+                Price : Rp.{data?.price}
+              </Button>
             </Row>
           </Card.Footer>
         </Card>
